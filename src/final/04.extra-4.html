@@ -9,7 +9,20 @@
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
-    function Message({subject, greeting}) {
+   const PropTypes = {
+     string(props, propName, componentName){
+       if (typeof props[propName] !== 'string'){
+        return new Error(
+            `Hey, the component ${componentName} needs the prop ${propName} to be a string, but a ${typeof props[
+              propName
+            ]} was passed`,
+         )
+       }
+     },
+   }
+   
+   
+   function Message({subject, greeting}) {
       return (
         <div className="message">
           {greeting}, {subject}
