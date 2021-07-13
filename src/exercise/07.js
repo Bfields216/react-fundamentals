@@ -8,7 +8,7 @@ const allItems = [
   {id: 'orange', value: '🍊 orange'},
   {id: 'grape', value: '🍇 grape'},
   {id: 'pear', value: '🍐 pear'},
-  {id: 'banana', value: ' Banana'},
+  {id: 'banana', value: ' Bananas'},
 ]
 
 function App() {
